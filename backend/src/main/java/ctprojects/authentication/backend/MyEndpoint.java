@@ -18,12 +18,13 @@ import javax.inject.Named;
  * An endpoint class we are exposing
  */
 @Api(name = "myApi", version = "v1", namespace = @ApiNamespace(ownerDomain = "backend.authentication.ctprojects", ownerName = "backend.authentication.ctprojects", packagePath = ""))
-public class MyEndpoint {
+    public class MyEndpoint {
     @ApiMethod(name = "sayHiAuth",
             clientIds = {ApiKeysAndIds.WEB_CLIENT_ID,
                     ApiKeysAndIds.ANDROID_CLIENT_ID,
                     com.google.api.server.spi.Constant.API_EXPLORER_CLIENT_ID},
-            audiences = {ApiKeysAndIds.AUDIENCE_ID})
+            audiences = {ApiKeysAndIds.AUDIENCE_ID},
+            scopes = ApiKeysAndIds.EMAIL_SCOPE)
 
     public MyBean sayHiAuth(User user, @Named("name") String name) throws UnauthorizedException {
         if (user == null)
