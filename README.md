@@ -1,2 +1,3 @@
 # Authentication_Prototype
-The authentication with the back-end (Cloud Endpoint) is working with the API Explorer : without signing in via a google account the user can't access to the method sayHiAuth (but can access sayHi) 
+This project is a prototype where a user is authenticated using a Google Account chosen from the account of his phone and can connect to cloud endpoint backend. 
+The backend has two methods, sayHi(unauthenticated) and sayHiAuth(authenticated)
