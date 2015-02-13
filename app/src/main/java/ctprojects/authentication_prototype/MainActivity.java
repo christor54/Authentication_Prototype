@@ -25,8 +25,8 @@ import ctprojects.authentication.backend.myApi.MyApi;
 
 public class MainActivity extends ActionBarActivity {
     private static MyApi myApiService = null;
-    private static final String URL_SERVEUR = "https://lyfeboat-backend.appspot.com/";
-    private static final String WEB_CLIENT_ID = "1004672689106-nld1kb02ik6tg8n5gp3viujfg7ea2vu7.apps.googleusercontent.com";
+    private static final String URL_SERVEUR = "";
+    private static final String WEB_CLIENT_ID = "256296234164-6llpf5b1kvm761b0594kpt0i51d6q2g4.apps.googleusercontent.com";
     private static final int REQUEST_ACCOUNT_PICKER = 2;
     private SharedPreferences settings;
     private String accountName;
@@ -36,7 +36,7 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        settings = getSharedPreferences("Lyfeboat", 0);
+        settings = getSharedPreferences("Authentication_Prototype", 0);
         credential = GoogleAccountCredential.usingAudience(MainActivity.this, "server:client_id:" + WEB_CLIENT_ID);
         setAccountName(settings.getString("ACCOUNT_NAME", null));
         if (credential.getSelectedAccountName() != null) {
@@ -65,8 +65,13 @@ public class MainActivity extends ActionBarActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.sayhi) {
+            new EndpointsAsyncTask().execute(new Pair<Context,String>(this,"say hi without auth"));
+            return true;
+        }
+
+        if (id == R.id.sayhiAuth) {
+            new EndpointsAsyncTaskAuth().execute(new Pair<Context,String>(this,"say hi with auth !!"));
             return true;
         }
 

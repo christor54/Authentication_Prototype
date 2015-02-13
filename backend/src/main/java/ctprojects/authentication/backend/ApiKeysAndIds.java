@@ -8,10 +8,8 @@ public class ApiKeysAndIds {
 
     static final String GCM_API_KEY = "!!! ENTER YOUR GCM API KEY HERE !!!";
 
-    static final String ANDROID_CLIENT_ID = "1004672689106-f5rra2b4jnp8g45vbairom6ght3kmf8h.apps.googleusercontent.com";
-    static final String ANDROID_CLIENT_ID_TESTER = "1004672689106-nld1kb02ik6tg8n5gp3viujfg7ea2vu7.apps.googleusercontent.com";
-    static final String IOS_CLIENT_ID = "1004672689106-58fmcqbfg9v8ekfjo0el47p5r4fralvt.apps.googleusercontent.com";
-    static final String WEB_CLIENT_ID ="1004672689106-nld1kb02ik6tg8n5gp3viujfg7ea2vu7.apps.googleusercontent.com";
+    static final String ANDROID_CLIENT_ID = "256296234164-2th3h16mjcb9ic2jnriegi1bi2ksoov6.apps.googleusercontent.com";
+    static final String WEB_CLIENT_ID ="256296234164-6llpf5b1kvm761b0594kpt0i51d6q2g4.apps.googleusercontent.com";
     static final String AUDIENCE_ID = WEB_CLIENT_ID;
 
     static final String API_OWNER = "ctprojects";//Original -> google.com
