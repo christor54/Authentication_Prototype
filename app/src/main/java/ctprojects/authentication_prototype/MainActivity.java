@@ -25,7 +25,7 @@ import ctprojects.authentication.backend.myApi.MyApi;
 
 public class MainActivity extends ActionBarActivity {
     private static MyApi myApiService = null;
-    private static final String URL_SERVEUR = "";
+    private static final String URL_SERVEUR = "https://1-dot-marc-chris-9192.appspot.com/";
     private static final String WEB_CLIENT_ID = "256296234164-6llpf5b1kvm761b0594kpt0i51d6q2g4.apps.googleusercontent.com";
     private static final int REQUEST_ACCOUNT_PICKER = 2;
     private SharedPreferences settings;
@@ -127,7 +127,7 @@ public class MainActivity extends ActionBarActivity {
                         // options for running against local devappserver
                         // - 10.0.2.2 is localhost's IP address in Android emulator
                         // - turn off compression when running against local devappserver
-//                        .setRootUrl(URL_SERVEUR+"_ah/api/")
+                        .setRootUrl(URL_SERVEUR+"_ah/api/")
                         .setGoogleClientRequestInitializer(new GoogleClientRequestInitializer() {
                             @Override
                             public void initialize(AbstractGoogleClientRequest<?> abstractGoogleClientRequest) throws IOException {
